@@ -1,5 +1,5 @@
 from django import forms
-from base.models import ReservaDeBanhoBase, Contato, CustomUser
+from base.models import ReservaDeBanhoBase, Contato, Cliente
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -23,11 +23,11 @@ class ReservaDeBanhoForm(forms.ModelForm):
   
 class ClienteForm(forms.ModelForm):
     class Meta:
-        model = CustomUser
+        model = Cliente
         fields = ['nome', 'cpf', 'endereco', 'email', 'telefone', 'telefone2']
         
 class RegistrationForm(UserCreationForm):
-    # Adicione os campos personalizados do modelo CustomUser
+    # Adicione os campos personalizados do modelo Cliente
     nome = forms.CharField(max_length=100)
     cpf = forms.CharField(max_length=14, required=True)
     endereco = forms.CharField(max_length=200, required=True)
@@ -36,5 +36,5 @@ class RegistrationForm(UserCreationForm):
     telefone2 = forms.CharField(max_length=15, required=False)
 
     class Meta:
-        model = CustomUser
+        model = Cliente
         fields = UserCreationForm.Meta.fields + ('nome', 'cpf', 'endereco', 'email', 'telefone', 'telefone2')

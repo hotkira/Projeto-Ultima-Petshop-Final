@@ -19,10 +19,10 @@ class ReservaDeBanho(models.Model):
         ('concluido', 'Concluído'),
     )
     
-    CustomUser = models.ForeignKey(
+    Cliente = models.ForeignKey(
         settings.AUTH_USER_MODEL, 
         on_delete=models.CASCADE, 
-        verbose_name='CustomUser',
+        verbose_name='Cliente',
         blank=True,
         null=True
     )

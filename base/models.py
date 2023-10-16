@@ -26,7 +26,7 @@ class ReservaDeBanhoBase(models.Model):
 
 
 #antigo Cliente  
-class CustomUser(AbstractUser):
+class Cliente(AbstractUser):
     nome = models.CharField(max_length=100)
     cpf = models.CharField(max_length=14, unique=True)
     endereco = models.CharField(max_length=200)
@@ -35,8 +35,8 @@ class CustomUser(AbstractUser):
     telefone2 = models.CharField(max_length=15, blank=True, null=True)
 
     # Adicione related_names personalizados para evitar conflitos
-    groups = models.ManyToManyField(Group, blank=True, related_name='customuser_set')
-    user_permissions = models.ManyToManyField(Permission, blank=True, related_name='customuser_set')
+    groups = models.ManyToManyField(Group, blank=True, related_name='Cliente_set')
+    user_permissions = models.ManyToManyField(Permission, blank=True, related_name='Cliente_set')
 
     def __str__(self):
         return self.nome

@@ -143,7 +143,7 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
-AUTH_USER_MODEL = 'base.CustomUser'
+AUTH_USER_MODEL = 'base.Cliente'
 #volta para a página inicial após o logout
 LOGOUT_REDIRECT_URL = '/'
 
