@@ -147,6 +147,10 @@ AUTH_USER_MODEL = 'base.CustomUser'
 #volta para a página inicial após o logout
 LOGOUT_REDIRECT_URL = '/'
 
+CSRF_TRUSTED_ORIGINS =[
+    'https://web-production-48f72.up.railway.app/'
+]
+
 
 
 
