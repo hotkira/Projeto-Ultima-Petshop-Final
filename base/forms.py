@@ -1,5 +1,4 @@
 from django import forms
-from base.models import Contato
 from base.models import ReservaDeBanhoBase, Contato, CustomUser
 from django.contrib.auth.forms import UserCreationForm
 
