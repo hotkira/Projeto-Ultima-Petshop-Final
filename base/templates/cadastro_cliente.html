@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block principal %}
+{% block title %}Cadastro de Cliente{% endblock %}
+{% block content %}
+<div class="container espaco-superior">
+    <h1 class="text-center">
+        Cadastro de cliente
+    </h1>
+    
+    {% if sucesso %}
+        <div class="alert alert-success" role="alert">
+            Cadastro feito com sucesso!
+        </div>
+    {% else %}
+    
+        {% include 'form_template.html' with form=cliente_form %}
+        
+    {% endif %}
+</div>
+{% endblock %}
+{% endblock %}

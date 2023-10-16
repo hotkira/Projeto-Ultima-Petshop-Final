@@ -1,0 +1,14 @@
+{% load static %}
+{% load bootstrap5 %}
+
+{% if sucesso %}
+    <div class="alert alert-success" role="alert">
+         Cadastro feito com sucesso!
+    </div>
+{% else %}
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+{% endif %}

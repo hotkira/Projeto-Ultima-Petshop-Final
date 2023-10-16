@@ -1,0 +1,106 @@
+{% load static %}
+{% load bootstrap5 %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if request.path == '/' %}
+      <title>Pet Shop - Ultima</title>
+    {% else %}
+      <title>{{ titulo_pagina }}</title> 
+    {% endif %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-rqz5A5v9hQFy5Zk5ktnDtmM1PmAv4Fgg2sf+5GIqly8wr3Cp13JSf5v5F5u2A1YPm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'template/style.css' %}?v=1">
+    <style>
+        .carousel-caption {
+            text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+            color: white; /* Define a cor do texto para branco */
+            -webkit-text-stroke: 0.5px black; /* Define o contorno em preto */
+            text-stroke: 0.5px black; /* Define o contorno em preto (padrão) */
+        }
+    </style>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/blog/">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link href="{% static 'template/bootstrap.min.css' %}" rel="stylesheet">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <script src="{% static 'template/bootstrap.bundle.min.js' %}"></script>
+    <!-- NAVBAR FEITA COM BOOTSTRAP-->
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary position-fixed col-12" style="z-index: 99; box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.5);">
+        <div class="container-fluid">
+           
+            <div id="linklogo" class="navbar-brand align-items-center justify-content-start col-4">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" href="#">Pet Shop Ultima</a>
+                  </li>
+              </ul>
+          </div>
+
+            <div class="collapse navbar-collapse align-items-center justify-content-center col-4" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://127.0.0.1:8000/" aria-current="page">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'cadastrar-cliente' %}">Cliente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'reservaDeBanho' %}">Reserva de Banho</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="contatologo" class="align-items-end justify-content-end col-4">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'login' %}">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'register' %}">Cadastre-se</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    {% if request.path == '/' %}
+    <!-- Conteúdo que deve aparecer apenas na página inicial -->
+    {% include 'inicio.html' %}
+    {% endif %}
+
+    {% block principal %}
+
+    {% endblock %}
+
+    <footer class="bg-primary">
+      <hr>
+      {% if request.path == '/' %}
+      <a href="#Petshop" title="TOPO"><i class="fas fa-arrow-up"></i></a>
+      {% endif %}
+      <p>Todos os direitos reservados &#169; - 2023</p>
+  </footer>
+</body>
+
+</html>

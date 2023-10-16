@@ -1,0 +1,179 @@
+{% load static %}
+
+<!-- CAROUSEL DO BOOTSTRAP-->
+
+<div id="Petshop" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#slide1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#slide2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#slide3" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="3000">
+        <img src="{% static 'img/corousel-3.jpg' %}" class="d-block w-100" alt="..." id="corousel_img-1">
+        <div class="carousel-caption d-none d-md-block text-white">
+          <h2>Básico (Banho e Tosa)</h2>
+          <p>No Petshop Última, oferecemos o serviço básico de banho e tosa, indo além da simples limpeza. Nossa equipe dedicada garante uma experiência relaxante para seu pet, incluindo um banho refrescante e uma tosa para mantê-lo com aparência impecável. Cuidamos da saúde e do bem-estar do seu companheiro com orientações sobre a escolha da ração certa.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'img/corousel-2.jpg' %}" class="d-block w-100" alt="..." id="corousel_img-2">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>TOP (Daycare, Banho e Tosa)</h2>
+          <p>A No Petshop Última, oferecemos o serviço TOP que inclui banho, tosa e opção de Daycare para diversão e socialização. Cuidamos da higiene e da aparência do seu pet com alta qualidade. No Petshop Última, compreendemos a importância da nutrição adequada para a saúde do seu animal de estimação.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="3000">
+        <img src="{% static 'img/corousel-1.jpg' %}" class="d-block w-100" alt="..." id="corousel_img-3">
+       
+        <div class="carousel-caption d-none d-md-block">
+          <h2>VIP (Banho, Tosa, Vermifugação e Vacina)</h2>
+          <p>No Petshop Última, garantimos cuidados VIP para seu pet. Oferecemos banho, tosa, vermifugação e vacinação para sua comodidade. Cuidamos da aparência e da saúde do seu peludo. No Petshop Última, também fornecemos orientações sobre a escolha da ração correta para a expectativa de vida do seu animal de estimação.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#Petshop" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#Petshop" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- CARDS BOOTSTRAP-->
+
+<div class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="card col-4" style="width: 22rem;">
+      <img src="{% static 'img/corousel-1.jpg' %}" class="card-img-top mt-1" alt="...">
+      <div class="card-body">
+        <h5>Básico (Banho e Tosa)</h5>
+        <p class="card-text">No Petshop Última, oferecemos o serviço básico de banho e tosa, indo além da simples limpeza. Nossa equipe dedicada garante uma experiência relaxante para seu pet, incluindo um banho refrescante e uma tosa para mantê-lo com aparência impecável...</p>
+
+        <!-- MODAL BOTÃO SAIBA MAIS-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1" aria-labelledby="exampleModalLabel1">
+          Saiba mais
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                {% comment %} deixar o id dinamico para não dar erro {% endcomment %}
+                <h5 class="modal-title" id="exampleModalLabel1">Básico (Banho e Tosa)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="{% static 'img/modal-1.jpg' %}"  alt="" style="width: 100%;">
+                <p class="card-text">No Petshop Última, oferecemos o serviço básico de banho e tosa, indo além da simples limpeza. Nossa equipe dedicada garante uma experiência relaxante para seu pet, incluindo um banho refrescante e uma tosa para mantê-lo com aparência impecável. Cuidamos da saúde e do bem-estar do seu companheiro com orientações sobre a escolha da ração certa.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" tabindex="-1">Fechar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--FIM BOTÃO SAIBA MAIS-->
+
+      </div>
+    </div>
+    <div class="card col-4" style="width: 22rem;">
+      <img src="{% static 'img/corousel-2.jpg' %}" class="card-img-top mt-1" alt="...">
+      <div class="card-body">
+        <h5>TOP (Daycare, Banho e Tosa)</h5>
+        <p class="card-text"> No Petshop Última, oferecemos o serviço TOP que inclui banho, tosa e opção de Daycare para diversão e socialização. Cuidamos da higiene e da aparência do seu pet com alta qualidade. No Petshop Última, compreendemos a importância da nutrição ...</p>
+
+        <!-- MODAL BOTÃO SAIBA MAIS-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal2" aria-labelledby="exampleModalLabel2">
+          Saiba mais
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">TOP (Daycare, Banho e Tosa)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="{% static 'img/modal-2.jpg' %}"  alt="" style="width: 100%;">
+                <p class="card-text"> No Petshop Última, oferecemos o serviço TOP que inclui banho, tosa e opção de Daycare para diversão e socialização. Cuidamos da higiene e da aparência do seu pet com alta qualidade. No Petshop Última, compreendemos a importância da nutrição adequada para a saúde do seu animal de estimação.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" tabindex="-1">Fechar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--FIM BOTÃO SAIBA MAIS-->
+
+      </div>
+    </div>
+    <div class="card col-4" style="width: 22rem;">
+      <img src="{% static 'img/corousel-3.jpg' %}"class="card-img-top mt-1" alt="...">
+      <div class="card-body">
+        <h5>VIP (Banho, Tosa, Vermifugação e Vacina)</h5>
+        <p class="card-text">No Petshop Última, garantimos cuidados VIP para seu pet. Oferecemos banho, tosa, vermifugação e vacinação para sua comodidade. Cuidamos da aparência e da saúde do seu peludo. No Petshop...</p>
+
+        <!-- MODAL BOTÃO SAIBA MAIS-->
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal3" aria-labelledby="exampleModalLabel3">
+          Saiba mais
+        </button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel3">VIP (Banho, Tosa, Vermifugação e Vacina)</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <img src="{% static 'img/modal-3.jpg' %}"  alt="" style="width: 100%;">
+                <p class="card-text">No Petshop Última, garantimos cuidados VIP para seu pet. Oferecemos banho, tosa, vermifugação e vacinação para sua comodidade. Cuidamos da aparência e da saúde do seu peludo. No Petshop Última, também fornecemos orientações sobre a escolha da ração correta para a expectativa de vida do seu animal de estimação.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" tabindex="-1">Fechar</button>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--FIM BOTÃO SAIBA MAIS-->
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ÍNICIO SOBRE -->
+
+<div class="row justify-content-center align-items-center"> <!-- Adicione align-items-center aqui -->
+  <hr>
+<article id="sobre">
+  <h3 id="titulo_sobre">Sobre</h3>
+  <p>No Petshop Última, somos um grupo apaixonado, unido por um amor em comum: nossos amigos peludos!
+     Desde o momento em que um pet entra pela nossa porta, nosso coração se enche de alegria.
+     Conhecer cada animal profundamente nos permite oferecer soluções sob medida para garantir vidas mais felizes.
+     Não esquecemos dos tutores humanos, que se tornam parte da família Petshop Última com nosso atendimento carinhoso. 
+     Aqui, a paixão pelos pets é o nosso guia. Junte-se a nós para uma experiência cheia de amor e cuidado.</p>
+  <img src="{% static 'img/sobre.jpg'%}" alt= "Sobre">
+
+</article>
+<!-- CONTATO-->
+<article id="contato" class="bg-primary">
+  <h3 id="titulo_contato">Contato</h3>
+  <p>Entre em contato conosco através das nossas mídias sociais</p>
+  <section id="links">
+    <a href=""><i class="fab fa-facebook" title="Visite nossa página no Facebook"></i></a>
+    <a href=""><i class="fab fa-instagram" title="Visite nossa página no Instagram"></i></a>
+    <a href=""><i class="fab fa-linkedin" title="Visite nossa página no Linkedin"></i></a>
+    
+  </section>
+</article>
+</div>

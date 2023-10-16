@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% block principal %}
+{% block title %}Cadastro de Reservas{% endblock %}
+    <div class="container espaco-superior">
+      <h1 class="text-center">
+        Reserve o banho do seu PET
+      </h1>
+    
+      {% if sucesso %}
+        <div class="alert alert-success" role="alert">
+          Reserva feita com sucesso!
+        </div>
+      {% else %}
+        <form method="post" novalidate>
+          {% csrf_token %}
+          {% load bootstrap5 %}
+          {% bootstrap_form ReservaDeBanhoForm %}
+          <button type="submit" class="btn btn-primary">Reservar</button>
+        </form>
+      {% endif %}
+    </div>
+  {% endblock %}
+
