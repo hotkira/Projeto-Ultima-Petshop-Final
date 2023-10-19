@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import ReservaDeBanhoForm, ClienteForm
 from django.contrib.auth import login
 from django.contrib.auth.forms import AuthenticationForm
+from django.urls import reverse
 
 
 from django.shortcuts import render, redirect
@@ -15,7 +16,7 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('pagina_inicial')
+            return redirect(reverse('inicio'))
         else:
             error_message = "Usuário ou senha inválidos. Por favor, tente novamente."
 
