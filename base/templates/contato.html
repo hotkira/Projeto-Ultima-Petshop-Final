@@ -1,14 +1,14 @@
 <main>
-  {% extends "inicio.html" %}
+  {% extends "index.html" %}
   {% block principal %}
     <div class="container">
       <h1 class="text-center">
         Página de contato
       </h1>
   
-      <p>
+     {% comment %}  <p>
         Envie uma mensagem ou entre em contato com o nosso representante: {{ nome|upper }} - {{ telefone }}
-      </p>
+      </p> {% endcomment %}
   
       {% if sucesso %}
         <div class="alert alert-success" role="alert">

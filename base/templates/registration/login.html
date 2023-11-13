@@ -2,15 +2,18 @@
 {% load bootstrap5 %}
 
 {% block principal %}
-  {% block title %}Login{% endblock %}
+
 
   <div class="container espaco-superior">
     <h1 class="text-center">
       Login
     </h1>
+    <h5>Usuário: cliente</h5>
+    <h5>Senha: petshopultima</h5>
     
     <form method="post" novalidate>
       {% csrf_token %}
+     
       {{ form.as_p }}
       <button type="submit" class="btn btn-primary">Login</button>
     </form>

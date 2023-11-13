@@ -1,50 +1,90 @@
 from django.shortcuts import render, redirect
-from .forms import ReservaDeBanhoForm, ClienteForm
-from django.contrib.auth import login
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import login, authenticate
 from django.urls import reverse
+from .forms import LoginForm, ClienteRegistrationForm, ReservaDeBanhoForm, ClienteForm, ContatoForm
+from base.models import Cliente
+from django.contrib.auth.decorators import login_required
+import logging
 
+# Configuração para registrar logs e encontrar o cliente logado
+logger = logging.getLogger(__name__)
 
-from django.shortcuts import render, redirect
-from .forms import RegistrationForm
+# Função para a página de login
 
 
 def login_view(request):
-    error_message = 'Não foi possível carregar a página de login. Por favor, tente novamente.'
+    error_message = ''
     if request.method == 'POST':
-        form = AuthenticationForm(request, request.POST)
+        form = LoginForm(request.POST)
         if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            return redirect(reverse('inicio'))
-        else:
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+
+            cliente = None  # Inicializa cliente com None
+
+            try:
+                cliente = Cliente.objects.get(username=username)
+                user = authenticate(
+                    request, username=username, password=password)
+            except Cliente.DoesNotExist:
+                pass
+
+            if user is not None:
+                return redirect(reverse('inicio'))
+
             error_message = "Usuário ou senha inválidos. Por favor, tente novamente."
 
-    else:
-        form = AuthenticationForm()
-
+    form = LoginForm()
     return render(request, 'registration/login.html', {'form': form, 'error_message': error_message})
-    
-    
+
+# Função para o registro de cliente
+
+
 def register(request):
     if request.method == 'POST':
-        form = RegistrationForm(request.POST)
+        form = ClienteForm(request.POST)
         if form.is_valid():
-            user = form.save()
-            login(request, user)  # Faça o login automaticamente após o registro
-            return redirect('inicio')  # Redirecione para a página inicial após o registro
+            cliente = form.save()
+
+            # Autenticar o usuário após o registro
+            user = authenticate(username=cliente.username,
+                                password=request.POST['password1'])
+            if user is not None:
+                login(request, user)
+
+            return redirect('inicio')
     else:
-        form = RegistrationForm()
-      
+        form = ClienteForm()
+
     return render(request, 'registration/registrar_cliente.html', {'form': form})
 
+# Página de início
+
+
 def inicio(request):
-  return render(request, 'index.html')
+    logger.debug('This is a test log message for the inicio view')
+    return render(request, 'index.html')
+
+# Função para a página de contato
+
 
 def contato(request):
-  print('método: ',request.method)
-  sucesso = False
+    sucesso = False
+    form = ContatoForm()
 
+    if request.method == 'POST':
+        form = ContatoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            sucesso = True
+    titulo_pagina = "Contato"
+    return render(request, 'contato.html', {'form': form, 'sucesso': sucesso, 'titulo_pagina': titulo_pagina})
+
+
+# Função para reserva de banho (requer autenticação)
+
+
+@login_required
 def reservaDeBanho(request):
     sucesso = False
 
@@ -59,19 +99,19 @@ def reservaDeBanho(request):
     titulo_pagina = "Reserva de banho"
     return render(request, 'reserva_de_banhos.html', {'form': form, 'sucesso': sucesso, 'titulo_pagina': titulo_pagina})
 
+# Função para cadastrar um cliente
+
 
 def cadastrar_cliente(request):
-    sucesso = False  # Inicialmente, definimos sucesso como False
+    sucesso = False
 
     if request.method == 'POST':
         form = ClienteForm(request.POST)
         if form.is_valid():
             form.save()
-            sucesso = True  # Se o cadastro for bem-sucedido, definimos sucesso como True
+            sucesso = True
     else:
-        form = ClienteForm()  # Use o nome correto do formulário aqui
+        form = ClienteForm()
 
-    # Definindo o título da página
     titulo_pagina = "Cadastro de Cliente"
     return render(request, 'cadastro_cliente.html', {'cliente_form': form, 'sucesso': sucesso})
-  

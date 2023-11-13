@@ -20,8 +20,6 @@ from dj_database_url import parse as db_url
 from decouple import config
 
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -33,8 +31,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)srg7@@t4un1*k+6pj@+x^d-o+=y+!f*z#!-s7*5#s#nu7$qtc'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=bool)
-
+# DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
@@ -52,7 +50,8 @@ INSTALLED_APPS = [
     'reserva',
     'rest_framework',
     'rest_framework.authtoken',
-    'rest_api'
+    'rest_api',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -90,10 +89,16 @@ WSGI_APPLICATION = 'petshop.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': config('DATABASE_URL', default='sqlite:///db.sqlite3', cast=db_url) 
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        # Use a função config para obter a URL do banco de dados
+        'NAME': config('DATABASE_URL', default='db.sqlite3'),
+    },
+    'test': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'test_db.sqlite3',  # Nome do banco de dados de teste
+    },
 }
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
@@ -143,15 +148,58 @@ REST_FRAMEWORK = {
     'PAGE_SIZE': 10
 }
 
-AUTH_USER_MODEL = 'base.Cliente'
-#volta para a página inicial após o logout
+
+# volta para a página inicial após o logout
 LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = 'login'
 
-CSRF_TRUSTED_ORIGINS =[
-    'https://web-production-48f72.up.railway.app'
-]
-
-
-
+# CSRF_TRUSTED_ORIGINS = [
+#   'https://web-production-48f72.up.railway.app'
+# ]
 
 
+AUTHENTICATION_BACKENDS = {
+    'django.contrib.auth.backends.ModelBackend',
+    'accounts.authentication.EmailBackend',
+}
+AUTH_USER_MODEL = 'auth.User'
+LOGIN_URL = 'login'
+
+
+SESSION_COOKIE_SECURE = False
+CSRF_COOKIE_SECURE = False
+
+
+# Configurações de registro
+# Diretório onde os logs serão armazenados
+LOGGING_DIR = os.path.join(BASE_DIR, 'logs')
+if not os.path.exists(LOGGING_DIR):
+    os.makedirs(LOGGING_DIR)
+
+# Nível de registro (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+LOGGING_LEVEL = 'DEBUG'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': LOGGING_LEVEL,
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGGING_DIR, 'debug.log'),
+            'formatter': 'verbose',
+        },
+    },
+    'root': {
+        'handlers': ['file'],
+        'level': LOGGING_LEVEL,
+    },
+}
+
+LOGIN_REDIRECT_URL = 'inicio'

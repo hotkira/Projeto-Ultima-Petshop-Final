@@ -7,14 +7,18 @@
     Reserve o banho do seu PET
   </h1>
   {% if sucesso %}
-  <div class="alert alert-success" role="alert">
-    Reserva feita com sucesso!
-  </div>
+    <div class="alert alert-success" role="alert">
+      Reserva feita com sucesso!
+    </div>
   {% endif %}
-  <form method="post" novalidate>
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    <button type="submit" class="btn btn-primary">Reservar</button>
-  </form>
+  
+  {% if not sucesso %}
+    <form method="post" novalidate>
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      <button type="submit" class="btn btn-primary">Reservar</button>
+    </form>
+  {% endif %}
 </div>
+
 {% endblock %}
