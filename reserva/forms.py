@@ -58,6 +58,13 @@ class ReservaDeBanhoForm(forms.ModelForm):
         widgets = {
             'diaDaReserva': forms.DateInput(attrs={'type': 'date'}),
         }
+
+    def __init__(self, *args, **kwargs):
+        super(ReservaDeBanhoForm, self).__init__(*args, **kwargs)
+        # Exclua o campo 'status' se estiver presente no formulário
+        if 'status' in self.fields:
+            del self.fields['status']
+
     # Função para validar os campos do formulário
 
     def clean(self):

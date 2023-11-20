@@ -77,6 +77,14 @@ class ReservaDeBanho(models.Model):
         blank=True,
         null=True
     )
+    # Novo campo 'status' editável
+    status = models.CharField(
+        verbose_name='Status',
+        choices=STATUS_OPCOES,
+        max_length=20,
+        default='agendado',
+        # editable=False  # Este campo não será exibido em formulários de edição
+    )
 
     class Meta:
         verbose_name = 'Formulário de Reserva de Banho'

@@ -7,14 +7,15 @@ from .models import ReservaDeBanho, Petshop
 @admin.register(ReservaDeBanho)
 class ReservaDeBanhoAdmin(admin.ModelAdmin):
     list_display = ['get_nome_cliente', 'nomeDoPet', 'diaDaReserva',
-                    'observacoes', 'turno']
+                    'turno', 'status']
     search_fields = ['nomeDoPet']
-    list_filter = ['diaDaReserva', 'turno', 'cliente__nome', 'tamanho']
+    list_filter = ['diaDaReserva', 'turno', 'cliente__nome', 'status']
 
     def get_nome_cliente(self, obj):
         return obj.cliente.nome if obj.cliente else ""
 
     get_nome_cliente.short_description = 'Nome do Cliente'
+
 
 # Registro do modelo Petshop no painel de administração
 
