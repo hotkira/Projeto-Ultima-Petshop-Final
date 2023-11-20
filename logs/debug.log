@@ -5705,3 +5705,433 @@ DEBUG 2023-11-20 16:11:31,971 views This is a test log message for the inicio vi
 INFO 2023-11-20 16:15:16,321 autoreload Watching for file changes with StatReloader
 INFO 2023-11-20 16:16:09,602 autoreload Watching for file changes with StatReloader
 INFO 2023-11-20 16:19:58,112 autoreload Watching for file changes with StatReloader
+WARNING 2023-11-20 16:24:18,424 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:26:20,345 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:27:58,319 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:33:49,830 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:36:17,938 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:40:30,662 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:43:47,693 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:51:11,450 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:52:33,275 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 16:53:09,821 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 16:53:50,738 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 16:53:53,395 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:00:54,921 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:00:57,320 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:03:03,094 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:05:03,242 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:07:55,547 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:10:29,247 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:11:16,313 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:11:18,740 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:12:35,699 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:12:38,119 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:14:34,560 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:15:12,563 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:15:15,666 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:16:02,335 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:16:04,770 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:17:07,995 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:17:10,374 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:18:02,153 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:18:04,546 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:18:38,853 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:20:36,243 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:20:38,598 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:21:19,251 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:21:59,984 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:22:02,492 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:23:55,785 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:25:09,781 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:25:12,114 log Not Found: /api/agendamento/1/
+INFO 2023-11-20 17:28:08,712 autoreload Watching for file changes with StatReloader
+DEBUG 2023-11-20 17:28:09,972 views This is a test log message for the inicio view
+WARNING 2023-11-20 17:29:04,739 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:30:50,202 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:30:52,610 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:31:38,422 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:35:07,008 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:35:09,389 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:36:52,820 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:36:54,906 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:39:06,751 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:39:09,113 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:40:32,587 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:40:34,941 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:43:03,557 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:47:28,901 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:49:55,555 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:51:10,341 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 17:51:45,669 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 17:51:48,051 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:55:40,126 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:56:31,495 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:59:00,919 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 17:59:36,636 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 18:00:06,556 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 18:00:08,912 log Not Found: /api/agendamento/1/
+ERROR 2023-11-20 18:01:33,241 log Internal Server Error: /reserva/criar/
+Traceback (most recent call last):
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\Documents\humberto\projeto_final\reserva\views.py", line 18, in criar_reserva_banho
+    cliente = Cliente.objects.get(id=request.user.id)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Notebook\AppData\Local\Programs\Python\Python311\Lib\site-packages\django\db\models\query.py", line 637, in get
+    raise self.model.DoesNotExist(
+base.models.Cliente.DoesNotExist: Cliente matching query does not exist.
+WARNING 2023-11-20 18:01:35,600 log Not Found: /api/agendamento/1/
+WARNING 2023-11-20 18:04:01,965 log Not Found: /api/agendamento/1/
